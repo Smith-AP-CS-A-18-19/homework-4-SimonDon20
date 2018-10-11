@@ -3,8 +3,11 @@ public class Homework4 {
 	/* Finish the constructor and create any necessary instance
 	 * variables
 	 */
+	 private String str;
+	 private int number1;
 	public Homework4(String s, int i) {
-
+		number1 = i;
+		str = s;
 	}
 
 	/* Return the product of the stored number and the
@@ -12,6 +15,9 @@ public class Homework4 {
 	 * multiplication
 	 */
 	public int multiply(double d) {
+		double x = d * number1;
+		int xprime = (int)x;
+		return xprime;
 
 	}
 
@@ -19,6 +25,9 @@ public class Homework4 {
 	 * product by the stored number
 	 */
 	public double sumProduct(int a, double b) {
+		double step1 = (double) a + b;
+		step1 = step1 * number1;
+		return step1;
 
 	}
 
@@ -26,12 +35,16 @@ public class Homework4 {
 	 * the integer portion of the provided double
 	 */
 	 public int remainder(double d) {
+		 int modulus = number1 % (int)d;
+		 return modulus;
 
 	}
 
 	/* Return the length of the stored String
 	 */
 	public int getLength() {
+		int length = str.length();
+		return length;
 
 	}
 
@@ -39,7 +52,8 @@ public class Homework4 {
 	 * String. Put a space between the two Strings
 	 */
 	public String concat(String s) {
-
+		return str + " " + s;
+		
 	}
 
 	public static void main(String[] args) {
